@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<html lang="en" xmlns:form="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form:form action="/save" method="post" modelAttribute="setting">
+    Languages:<form:select path="languages" items="${user.getLanguages()}"/>
+    Page Size: Show <form:select path="size" items="${user.getSize()}"/>
+    Spams filter: <form:checkbox />
+</form:form>
+</body>
+</html>
